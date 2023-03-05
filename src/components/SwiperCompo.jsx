@@ -1,9 +1,12 @@
 import React from 'react';
-import { Pagination } from 'swiper';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import {BiSkipPreviousCircle,BiSkipNextCircle} from 'react-icons/bi';
 import LoopSlide from './LoopSlide';
 
+import 'swiper/css';
+// import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 const SwiperCompo = ({ discover1, discover2, discover3, discover4 }) => {
   const slideData = [
     {
@@ -37,11 +40,18 @@ const SwiperCompo = ({ discover1, discover2, discover3, discover4 }) => {
         centeredSlides={true}
         effect={'coverflow'}
         loop={true}
-        modules={[Pagination]}
+        modules={[Pagination,Navigation]}
+        pagination={{ el: '.pagination' ,clickable: true}}
+        navigation={{ 
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          clickable: true,
+         }}
+
         className="mySwiper"
       >
         {slideData.map((slide) => (
-          <SwiperSlide key={slide.title} className=''>
+          <SwiperSlide key={slide.title} className='swiper-slide'>
             {({ isActive }) => (
               <LoopSlide
                 image={slide.image}
@@ -52,6 +62,16 @@ const SwiperCompo = ({ discover1, discover2, discover3, discover4 }) => {
             )}
           </SwiperSlide>
         ))}
+
+        <div className="slider_controller flex justify-center mt-10">
+          <div className="swiper-button-prev">
+            <BiSkipPreviousCircle className=' text-4xl dark:text-white'/>
+          </div>
+          <div className="pagination text-center"></div>
+          <div className="swiper-button-next">
+            <BiSkipNextCircle className=' text-4xl dark:text-white'/>
+          </div>
+        </div>
       </Swiper>
     </div>
   );

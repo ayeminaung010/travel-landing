@@ -18,7 +18,13 @@ module.exports = {
         '2xl': '11rem',
       },
     },
-    extend: {},
+    extend: {
+      invert: {
+        25: '.25',
+        50: '.5',
+        75: '.75',
+      },
+    },
   },
   plugins: [],
 }

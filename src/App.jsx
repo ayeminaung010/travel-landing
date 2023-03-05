@@ -16,13 +16,22 @@ import experience2 from '../public/img/experience2.jpg';
 
 import video from '../public/video/video.mp4';
 
+import sponsors1 from '../public/img/sponsors1.png';
+import sponsors2 from '../public/img/sponsors2.png';
+import sponsors3 from '../public/img/sponsors3.png';
+import sponsors4 from '../public/img/sponsors4.png';
+import sponsors5 from '../public/img/sponsors5.png';
+
 import Information from './sections/Information';
 import Discover from './sections/Discover';
 import 'swiper/css';
 import Experience from './sections/Experience';
 import Video from './sections/Video';
 import Place from './sections/Place';
-
+import Subscribe from './sections/Subscribe';
+import Sponsor from './sections/Sponsor';
+import Footer from './sections/Footer';
+import './components/SwiperLoop.css';
 
 const App = () => {
   
@@ -38,6 +47,9 @@ const App = () => {
         <Experience experience1={experience1} experience2={experience2}/>
         <Video video={video}/>
         <Place discover1={discover1} discover2={discover2} discover3={discover3} discover4={discover4} />
+        <Subscribe/>
+        <Sponsor sponsors1={sponsors1} sponsors2={sponsors2} sponsors3={sponsors3} sponsors4={sponsors4} sponsors5={sponsors5}/>
+        <Footer/>
       </div>
     </>
   )

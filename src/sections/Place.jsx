@@ -1,5 +1,5 @@
 import React from 'react'
-import {AiOutlineStar,AiOutlineArrowRight} from 'react-icons/ai';
+import LoopPlaces from '../components/LoopPlaces';
 const Place = ({discover1,discover2,discover3,discover4}) => {
     const slideData = [
         {
@@ -47,30 +47,15 @@ const Place = ({discover1,discover2,discover3,discover4}) => {
                 Choose Your Place
             </h1>
         </div>
-        <div className=" w-56 relative overflow-hidden">
-            <img src={discover1} alt="" className=' transition-transform duration-500 hover:scale-125' />
-            <div className=" absolute bottom-8 text-white left-3">
-                <div className="flex flex-col gap-5">
-                    <div className="">
-                        <h1 className=' font-medium text-2xl'>Bali</h1>
-                        <span className=' text-sm'>Indonesia</span>
-                    </div>
-                    <div className="">
-                        <span>$2499</span>
-                    </div>
-                </div>
+        <div className=" flex flex-wrap items-center justify-center ">
+          <div className="lg:w-[800px] md:w-[500px]">
+            <div className="flex  flex-wrap  justify-center gap-10 mt-10 items-center md:justify-start">
+                {slideData.map((data) =>(
+                    <LoopPlaces key={data.title} image={data.image} title={data.title} location={data.location} rating={data.rating} price={data.price}/>
+                  ))}
             </div>
-            <div className="flex flex-wrap items-center gap-2 absolute top-3 right-2 text-white">
-                <AiOutlineStar className=' text-xl'/>
-                <span>4.8</span>
-            </div>
-            <div className="absolute bottom-0 right-0">
-                <button className=' bg-green-900 px-4 py-2'>
-                    <AiOutlineArrowRight className=' text-2xl text-white'/>
-                </button>
-            </div>
+          </div>
         </div>
-
     </div>
   )
 }

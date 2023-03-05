@@ -29,10 +29,10 @@ const Experience = ({experience1,experience2}) => {
             </div>
         </div>
         <div className=" flex justify-center mt-10">
-            <div className=" flex justify-center">
-                <img src={experience1} className=' h-80' alt="" />
+            <div className=" flex justify-center overflow-hidden relative z-0">
+                <img src={experience1} className=' h-80 transition-transform duration-500 hover:scale-125' alt="" />
             </div>
-            <img src={experience2} className=' w-64 h-80 mt-20 -ml-40' alt="" />
+            <img src={experience2} className=' w-64 h-80 mt-20 -ml-40 z-30 transition-transform duration-500 hover:scale-110' alt="" />
         </div>
     </div>
   )

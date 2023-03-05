@@ -10,5 +10,8 @@
     .active{
         @apply border-b-2
     }
+    .sponsorImg{
+        @apply  invert-50 w-36 hover:invert-25 transition-all duration-300 
+    }
     
 }
