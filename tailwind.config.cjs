@@ -6,6 +6,9 @@ module.exports = {
   ],
   darkMode: ['class', '[data-mode="dark"]'],
   theme: {
+    fontFamily: {
+      'poppins' : 'Poppins'
+    },
     container: {
       padding: {
         DEFAULT: '1rem',
