@@ -10,6 +10,7 @@ const NavBar = () => {
     const [menu,setMenu] = useState(false);
     const handleMenu = () => {
         setMenu(true);
+        document.body.style.overflow = 'hidden';
     }
 
   return (
@@ -34,10 +35,16 @@ const NavBar = () => {
                     </button>
                 </div>
             </div>    
-            <div className={menu === false ? 'hidden' : " md:hidden absolute top-0 right-0 w-full h-screen transition-all duration-500"} >
-                <div className=" mt-8">
+            {/* for mobile  */}
+            <div className={menu === false ? 'hidden' : " md:hidden bg-gray-700 absolute top-0 right-0 w-full h-screen transition-opacity  duration-500"} >
+                <div className=" mt-3">
                     <div className=" mr-5  flex justify-end">
-                        <TfiClose className=' text-2xl ' onClick={() => setMenu(false)} />
+                        <TfiClose className=' text-2xl ' onClick={() =>
+                            {
+                                setMenu(false) 
+                                document.body.style.overflow = 'visible';
+                            }
+                             } />
                     </div>
                     <ul className='mt-5 flex space-y-10 text-lg flex-col font-semibold items-center justify-between '>
                         <li className=' link active'>Home</li>
@@ -56,3 +63,5 @@ const NavBar = () => {
 }
 
 export default NavBar
+
+

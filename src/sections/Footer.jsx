@@ -4,8 +4,8 @@ import {BsTwitter} from 'react-icons/bs'
 const Footer = () => {
   return (
     <div className="mt-28">
-        <div className="my-20 flex flex-wrap lg:space-x-32 md:space-x-20 space-y-5 md:space-y-0 ">
-            <div className="  flex flex-wrap justify-start    ">
+        <div className="my-20 flex flex-wrap flex-col gap-5   lg:space-x-12 md:flex-row    md:space-y-0 ">
+            <div className="  flex flex-wrap justify-start lg:space-x-24   ">
                 <div className=' w-52 '>
                     <h5 className=' text-xl'>Travel</h5>
                     <p className=' text-gray-500 mt-3'>Travel you choose the
@@ -18,10 +18,17 @@ const Footer = () => {
                         <AiFillYoutube className=' text-2xl'/>
                     </div>
                 </div>
-            
+                <div className=' hidden md:block'>
+                    <h5 className=' text-xl'>About</h5>
+                    <div className="flex flex-col space-y-2 mt-3">
+                        <span className=' text-gray-500'>About Us</span>
+                        <span className=' text-gray-500'>Features</span>
+                        <span className=' text-gray-500'>New & Blog</span>
+                    </div>
+                </div>
             </div>
-            <div className="flex flex-wrap lg:space-x-32 md:space-x-6 justify-start md:flex-row md:space-y-0 flex-col space-y-5">
-                <div className='   '>
+            <div className="flex flex-wrap  lg:space-x-32 justify-start   flex-col space-y-5 md:space-x-6  md:flex-row md:space-y-0">
+                <div className=' md:hidden'>
                     <h5 className=' text-xl'>About</h5>
                     <div className="flex flex-col space-y-2 mt-3">
                         <span className=' text-gray-500'>About Us</span>
@@ -47,9 +54,9 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className="flex flex-wrap justify-center md:justify-between my-10">
-            <span>© 2023 All rigths reserved.</span>
-            <div className="flex flex-wrap gap-5">
+        <div className="flex flex-wrap justify-center md:justify-between  my-10">
+            <span>© 2023 All rights reserved.</span>
+            <div className="flex flex-wrap  gap-5">
                 <a href="#" className=' text-gray-400 hover:text-gray-600'>Terms & Agreements</a>
                 <a href="#" className=' text-gray-400 hover:text-gray-600'>Privacy Policy</a>
             </div>
