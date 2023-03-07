@@ -4,7 +4,7 @@ import SwiperCompo from '../components/SwiperCompo'
 
 const Discover = ({discover1,discover2,discover3,discover4}) => {
   return (
-    <div className=' mt-20'>
+    <div className=' my-20'>
         <div className="text-xl md:text-3xl font-medium text-center">
             <h1>
                 Discover The Most

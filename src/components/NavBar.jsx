@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {FiMoon} from 'react-icons/fi'
 import {BsFillSunFill} from 'react-icons/bs'
 import {CiMenuFries} from 'react-icons/ci'
@@ -11,14 +11,15 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scro
 
 const NavBar = () => {
     const [menu,setMenu] = useState(false);
+    
     const handleMenu = () => {
         setMenu(true);
         document.body.style.overflow = 'hidden';
     }
 
   return (
-    <nav className=' mt-6 sticky z-50 top-7'>
-        <div className="flex  flex-wrap justify-between items-center">
+    <nav className=' mt-6  sticky z-50 top-7'>
+        <div className="flex   flex-wrap justify-between items-center">
             <div className=" text-2xl font-bold ">
                 <h1>Travel</h1>
             </div>

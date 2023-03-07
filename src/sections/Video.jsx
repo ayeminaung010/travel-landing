@@ -14,7 +14,7 @@ const Video = ({video}) => {
         setPlay(false);
     }
   return (
-    <div className=' mt-20 text-center'>
+    <div className=' my-28 text-center'>
         <div className=" text-3xl font-medium ">
             <h1>
                 Video Tour

@@ -5,10 +5,10 @@
 
 @layer components{
     .link{
-        @apply hover:underline cursor-pointer 
+        @apply hover:underline hover:text-green-500 cursor-pointer 
     }
     .active{
-        @apply border-b-2
+        @apply border-b-2 text-green-400
     }
     .sponsorImg{
         @apply  invert-50 w-36 hover:invert-25 transition-all duration-300 
