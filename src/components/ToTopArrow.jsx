@@ -23,7 +23,7 @@ const ToTopArrow = () => {
     }
 
   return (
-    <div>
+    <div className=' z-50'>
       {visible ? (
       <button onClick={ScrollTopHandler} className=' bg-green-700 px-3  rounded-full py-3 fixed bottom-10 right-10 hover:bg-green-500 '>
           <AiOutlineArrowUp className=' text-2xl ' />
