@@ -5,6 +5,9 @@ import {CiMenuFries} from 'react-icons/ci'
 import {TfiClose} from 'react-icons/tfi'
 
 import DarkModeSwitcher from './DarkModeSwitcher'
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 const NavBar = () => {
     const [menu,setMenu] = useState(false);
@@ -21,10 +24,27 @@ const NavBar = () => {
             </div>
             <div className=" ">
                 <ul className='hidden space-x-10 text-lg flex-wrap font-semibold items-center justify-between md:flex'>
-                    <li className=' link'>Home</li>
-                    <li className=' link'>About</li>
-                    <li className=' link'>Discover</li>
-                    <li className=' link'>Places</li>
+                    
+                    <li className=' link'>
+                        <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} >
+                            Home
+                        </Link>
+                    </li>
+                    <li className=' link'>
+                        <Link activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500} >
+                            About
+                        </Link>
+                    </li>
+                    <li className=' link'>
+                        <Link activeClass="active" to="discover" spy={true} smooth={true} offset={50} duration={500} >
+                            Discover
+                        </Link>
+                    </li>
+                    <li className=' link'>
+                        <Link activeClass="active" to="places" spy={true} smooth={true} offset={50} duration={500} >
+                            Places
+                        </Link>
+                    </li>
                     <li className=' link'>
                         <DarkModeSwitcher FiMoon={FiMoon} BsFillSunFill={BsFillSunFill}/>
                     </li>
@@ -47,10 +67,26 @@ const NavBar = () => {
                              } />
                     </div>
                     <ul className='mt-5 flex space-y-10 text-lg flex-col font-semibold items-center justify-between '>
-                        <li className=' link active'>Home</li>
-                        <li className=' link'>About</li>
-                        <li className=' link'>Discover</li>
-                        <li className=' link'>Places</li>
+                        <li className=' link '>
+                            <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} >
+                                Home
+                            </Link>
+                        </li>
+                        <li className=' link'>
+                            <Link activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500} >
+                                About
+                            </Link>
+                        </li>
+                        <li className=' link'>
+                            <Link activeClass="active" to="discover" spy={true} smooth={true} offset={50} duration={500} >
+                                Discover
+                            </Link>
+                        </li>
+                        <li className=' link'>
+                            <Link activeClass="active" to="places" spy={true} smooth={true} offset={50} duration={500} >
+                                Places
+                            </Link>
+                        </li>
                         <li className=' link'>
                             <DarkModeSwitcher FiMoon={FiMoon} BsFillSunFill={BsFillSunFill}/>
                         </li>

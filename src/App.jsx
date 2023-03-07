@@ -32,24 +32,41 @@ import Subscribe from './sections/Subscribe';
 import Sponsor from './sections/Sponsor';
 import Footer from './sections/Footer';
 import './components/SwiperLoop.css';
+import { Element } from 'react-scroll';
+import ToTopArrow from './components/ToTopArrow';
 
 const App = () => {
-  
+
 
   return (
     <>
-      <div className="font-poppins container mx-auto selection:bg-green-400 dark:bg-gray-600 ">
+      <div   className="font-poppins container mx-auto selection:bg-green-400 dark:bg-gray-600 ">
         <img src={home} className=' absolute right-0 top-0 md:object-cover object-none w-screen h-screen lg:h-screen xl:h-5/6  -z-50' alt="" />
         <NavBar className=' z-50'/>
-        <HeroSection home2={home2}/>
-        <Information className='' about1={about1} about2={about2}/>
-        <Discover discover1={discover1} discover2={discover2} discover3={discover3} discover4={discover4}/>
+        <Element name="home" className="home">
+          <HeroSection home2={home2}/>
+        </Element>
+
+        <Element name="about" className="about">
+          <Information className='' about1={about1} about2={about2}/>
+        </Element>
+
+        <Element name="discover" className="discover">
+          <Discover discover1={discover1} discover2={discover2} discover3={discover3} discover4={discover4}/>
+        </Element>
+        
         <Experience experience1={experience1} experience2={experience2}/>
         <Video video={video}/>
-        <Place discover1={discover1} discover2={discover2} discover3={discover3} discover4={discover4} />
+
+        <Element name="places" className="places">
+          <Place discover1={discover1} discover2={discover2} discover3={discover3} discover4={discover4} />
+        </Element>
+
         <Subscribe/>
         <Sponsor sponsors1={sponsors1} sponsors2={sponsors2} sponsors3={sponsors3} sponsors4={sponsors4} sponsors5={sponsors5}/>
-        <Footer/>
+        <Footer   />
+        <ToTopArrow />
+
       </div>
     </>
   )

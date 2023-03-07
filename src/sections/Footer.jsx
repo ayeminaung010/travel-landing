@@ -1,9 +1,11 @@
 import React from 'react'
 import {AiFillFacebook,AiFillInstagram,AiFillYoutube} from 'react-icons/ai'
 import {BsTwitter} from 'react-icons/bs'
+import ToTopArrow from '../components/ToTopArrow'
 const Footer = () => {
+
   return (
-    <div className="mt-28">
+    <div className="mt-28 relative">
         <div className="my-20 flex flex-wrap flex-col gap-5   lg:space-x-12 md:flex-row    md:space-y-0 ">
             <div className="  flex flex-wrap justify-start lg:space-x-24   ">
                 <div className=' w-52 '>
@@ -61,6 +63,7 @@ const Footer = () => {
                 <a href="#" className=' text-gray-400 hover:text-gray-600'>Privacy Policy</a>
             </div>
         </div>
+        {/* <ToTopArrow /> */}
     </div>
   )
 }
